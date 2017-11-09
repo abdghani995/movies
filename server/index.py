@@ -49,17 +49,18 @@ def search():
 	print(type(doc))
 	return  json.dumps({"result":doc})
 
+
 @app.route('/genres')
 def genres():
     with open("./data/genres.json", "r") as f:
-    	content = f.read()
-    return render_template("genres.html", content=content)
+    	content = json.load(f)
+    return makeResponse(content)
 
 @app.route('/production_companies')
 def production_companies():
     with open("./data/production_companies.json", "r") as f:
-    	content = f.read()
-    return render_template("production_companies.html", content=content)
+    	content = json.load(f)
+    return makeResponse(content)
 
 
 @app.route('/searchbyCharacter',methods=['POST'])
