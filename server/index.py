@@ -6,12 +6,13 @@ from flask import request
 import jsonify
 from collections import Counter
 from utils import makeResponse,check
-
+from flask.ext.cors import CORS 
 
 client = MongoClient('localhost', 27017)
 db = client['movies']
 app = Flask(__name__)
 
+CORS(app)
 @app.route('/')
 def hello_world():
     return 'Hello World!'
