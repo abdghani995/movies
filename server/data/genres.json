@@ -1,4 +1,4 @@
- {
+ [
  	"Mystery": 6618,
  	"Romance": 19993,
  	"Family": 11509,
@@ -19,4 +19,4 @@
  	"War": 4148,
  	"Thriller": 19061,
  	"History": 4744
- }
+ ]
